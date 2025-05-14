@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "path": "echo",
+    "apiRevision": "1",
+    "apiVersionSetId": "/subscriptions/c6a8ee28-19ad-41b6-a129-4a6e1c15ef34/resourceGroups/apim-aoairg/providers/Microsoft.ApiManagement/service/apimaoaires/apiVersionSets/67ffc50078fbd28138becbe5",
+    "authenticationSettings": {
+      "oAuth2": {
+        "authorizationServerId": "oauthserver"
+      }
+    },
+    "displayName": "Echo API",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://echo.playground.azure-api.net/api",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": false
+  }
+}

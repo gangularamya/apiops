@@ -1,0 +1,21 @@
+<policies>
+	<inbound>
+		<base />
+		<set-backend-service base-url="https://echo.playground.azure-api.net/api" />
+		<rate-limit-by-key calls="2" renewal-period="15" counter-key="@(context.Subscription.Id)" />
+		<ip-filter action="allow">
+			<address-range from="10.0.0.100" to="10.0.0.200" />
+			<address>192.168.1.1</address>
+			<address>10.0.0.0</address>
+		</ip-filter>
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>
