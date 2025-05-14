@@ -90,6 +90,7 @@ paths:
   /getblobdata:
     get:
       summary: testbloboperation
+      description: testbloboperation
       operationId: testbloboperation
       responses:
         '200':
