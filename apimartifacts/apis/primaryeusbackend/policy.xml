@@ -14,12 +14,12 @@
 		<!--2. APIM instance must be integrated with AppInsights-->
 		<!--3. AppInsights logging must be enabled for the api you want to log-->
 		<!--4. Enable customer metrics with dimensions in AppInsights-->
-		<azure-openai-emit-token-metric namespace="AzureOpenAI">
-			<dimension name="Client IP" value="@(context.Request.IpAddress)" />
-			<dimension name="Subscription ID" />
-			<dimension name="API ID" />
-			<!-- <dimension name="Backend-URL" value="@(context.Res.Url.ToString())" /> -->
-		</azure-openai-emit-token-metric>
+		<!-- <azure-openai-emit-token-metric namespace="AzureOpenAI"> -->
+		<!-- <dimension name="Client IP" value="@(context.Request.IpAddress)" /> -->
+		<!-- <dimension name="Subscription ID" /> -->
+		<!-- <dimension name="API ID" /> -->
+		<!-- <dimension name="Backend-URL" value="@(context.Res.Url.ToString())" /> -->
+		<!-- </azure-openai-emit-token-metric> -->
 		<azure-openai-token-limit counter-key="@(context.Subscription.Id)" tokens-per-minute="5000" estimate-prompt-tokens="false" />
 		<!-- <set-backend-service backend-id="myBackendPool" /> -->
 	</inbound>
