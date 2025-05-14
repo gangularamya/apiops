@@ -67,6 +67,7 @@ paths:
   /getblobdata:
     get:
       summary: testbloboperation
+      description: testbloboperation
       operationId: testbloboperation
       responses:
         '200':
@@ -97,6 +98,7 @@ paths:
   /user:
     get:
       summary: getuserprofile
+      description: getuserprofile
       operationId: getuserprofile
       responses:
         '200':
