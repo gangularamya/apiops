@@ -1,0 +1,32 @@
+<!--
+    - Policies are applied in the order they appear.
+    - Position <base/> inside a section to inherit policies from the outer scope.
+    - Comments within policies are not preserved.
+-->
+<!-- Add policies as children to the <inbound>, <outbound>, <backend>, and <on-error> elements -->
+<policies>
+	<!-- Throttle, authorize, validate, cache, or transform the requests -->
+	<inbound>
+		<base />
+		<validate-azure-ad-token tenant-id="977e11d4-0efd-4298-8f6d-c5b7633b9ac1" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized. Access token is missing or invalid. ">
+			<client-application-ids>
+				<application-id>561d9821-8edb-4d5d-a83c-aebfcb468727</application-id>
+			</client-application-ids>
+			<audiences>
+				<audience>https://graph.microsoft.com</audience>
+			</audiences>
+		</validate-azure-ad-token>
+	</inbound>
+	<!-- Control if and how the requests are forwarded to services  -->
+	<backend>
+		<base />
+	</backend>
+	<!-- Customize the responses -->
+	<outbound>
+		<base />
+	</outbound>
+	<!-- Handle exceptions and customize error responses  -->
+	<on-error>
+		<base />
+	</on-error>
+</policies>
