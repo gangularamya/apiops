@@ -1,6 +1,7 @@
 {
   "properties": {
     "displayName": "Echo API",
+    "description": "echo api",
     "versioningScheme": "Query",
     "versionQueryName": "api-version"
   }
