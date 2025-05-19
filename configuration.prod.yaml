@@ -1,9 +1,9 @@
 apimServiceName: apimaoaires-prod
 namedValues:
 - name: 6728d61d46346110a8851a88
-    properties:
-      displayName: Logger-Credentials--6728d61d46346110a8851a89
-      value: "{#appInsightsLoggerKey#}"
+  properties:
+    displayName: Logger-Credentials--6728d61d46346110a8851a89
+    value: "{#appInsightsLoggerKey#}"
 loggers:
     - name: apimaoaiappinsights
       properties:
